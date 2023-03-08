@@ -8,6 +8,7 @@ RUN echo "===> Update packages..."  && \
     echo "===> Installing Ansible..."               && \
     mkdir -p /etc/ansible                           && \
     pip3 install 'ansible==2.10.7'                  && \
+    pip3 install 'jinjia==3.1.2'                    && \
     apt-get install -y sshpass openssh-client rsync && \
     echo "===> Adding hosts for convenience..."     && \
     echo 'localhost' > /etc/ansible/hosts           && \
